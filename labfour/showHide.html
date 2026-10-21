@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reveal Panel</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        color: #172554;
+        background: radial-gradient(
+            circle at top left,
+            #fef3c7,
+            transparent 40%
+          ),
+          linear-gradient(135deg, #eff6ff, #c7d2fe);
+      }
+      main {
+        width: min(560px, calc(100% - 40px));
+        padding: 36px;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid white;
+        border-radius: 24px 6px 24px 6px;
+        box-shadow: 0 24px 60px rgba(30, 64, 175, 0.14);
+      }
+      h1 {
+        margin-top: 0;
+      }
+      #content {
+        display: none;
+        margin-top: 20px;
+        padding: 18px;
+        font-size: 18px;
+        border-left: 4px solid #f59e0b;
+        background: #fffbeb;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        color: white;
+        background: #1d4ed8;
+        border: none;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Show or Hide Content</h1>
+      <button onclick="toggleContent()">Show/Hide Content</button>
+      <div id="content">
+        <p>This content is toggled by the button above.</p>
+      </div>
+      <script>
+        function toggleContent() {
+          const content = document.getElementById("content");
+          if (content.style.display === "none") {
+            content.style.display = "block";
+          } else {
+            content.style.display = "none";
+          }
+        }
+      </script>
+    </main>
+  </body>
+</html>

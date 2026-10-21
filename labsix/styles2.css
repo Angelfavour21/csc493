@@ -1,0 +1,22 @@
+/* CSS for Video Section */
+#video-section {
+  text-align: center;
+  margin: 0;
+}
+.video-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.video-controls button {
+  padding: 11px 22px;
+  background: linear-gradient(135deg, #14b8a6, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.video-controls button:hover {
+  filter: brightness(1.12);
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Data Pulse</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#fetchBtn").click(function () {
+          $.ajax({
+            url: "https://jsonplaceholder.typicode.com/users/1",
+            type: "GET",
+            success: function (data) {
+              $("#output").html(`<h3>${data.name}</h3><p>${data.email}</p>`);
+            },
+            error: function () {
+              $("#output").html("Error fetching data");
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container" style="font-family: Arial, sans-serif; max-width: 700px; margin: 60px auto; padding: 28px; border-radius: 20px; background: linear-gradient(135deg, #fef3c7, #fae8ff); box-shadow: 0 18px 40px rgba(88,28,135,.12);">
+      <h1>jQuery AJAX Example</h1>
+      <button id="fetchBtn" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); color: white; border: none; border-radius: 999px; padding: 12px 18px; font-weight: bold;">Fetch User Data</button>
+      <div id="output" style="margin-top: 20px"></div>
+    </div>
+  </body>
+</html>

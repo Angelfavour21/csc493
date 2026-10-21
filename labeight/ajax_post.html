@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Send Lab</title>
+    <script>
+      function submitData() {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+        xhr.timeout = 10000;
+        xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+        xhr.onload = function () {
+          if (xhr.status === 201) {
+            document.getElementById("output").innerHTML = "Data submitted successfully: " + xhr.responseText;
+          } else {
+            document.getElementById("output").innerHTML = "Error submitting data: " + xhr.status + " " + (xhr.statusText || "Request failed");
+          }
+        };
+        xhr.onerror = function () {
+          document.getElementById("output").innerHTML = "Error submitting data: Unable to connect to the server.";
+        };
+        xhr.ontimeout = function () {
+          document.getElementById("output").innerHTML = "Error submitting data: The request timed out.";
+        };
+        const data = JSON.stringify({
+          title: document.getElementById("title").value,
+          body: document.getElementById("body").value,
+          userId: 1,
+        });
+        xhr.send(data);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container" style="font-family: Arial, sans-serif; max-width: 700px; margin: 60px auto; padding: 30px; border-radius: 20px; background: linear-gradient(135deg, #f5f3ff, #dbeafe); box-shadow: 0 18px 40px rgba(76,29,149,.12);">
+      <h1>Submit Data Using AJAX</h1>
+      <form onsubmit="event.preventDefault(); submitData();">
+        <input type="text" id="title" placeholder="Mat no" required />
+        <br /><br />
+        <textarea id="body" placeholder="course description" required></textarea>
+        <br /><br />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="output" style="margin-top: 20px"></div>
+    </div>
+  </body>
+</html>

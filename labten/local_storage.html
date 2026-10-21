@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Vault</title>
+    <script>
+      function saveToLocalStorage() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        alert("Data saved to local storage");
+      }
+      function retrieveFromLocalStorage() {
+        const name = localStorage.getItem("name");
+        const email = localStorage.getItem("email");
+        if (name && email) {
+          document.getElementById("output").innerHTML = `<p>Name: ${name}</p><p>Email: ${email}</p>`;
+        } else {
+          document.getElementById("output").innerHTML = "No data found in local storage";
+        }
+      }
+      function clearLocalStorage() {
+        localStorage.clear();
+        alert("Local storage cleared");
+        document.getElementById("output").innerHTML = "";
+      }
+    </script>
+  </head>
+  <body style="font-family: Arial, sans-serif; background: linear-gradient(135deg, #ecfeff, #d9f99d); min-height: 100vh; padding: 40px;">
+    <div style="max-width: 620px; margin: 0 auto; background: rgba(255,255,255,0.8); border-radius: 20px; padding: 30px; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);">
+      <h1>Local Storage Example</h1>
+      <p style="color: #475569;">This demo stores your name and email in the browser memory.</p>
+      <form onsubmit="event.preventDefault(); saveToLocalStorage();">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <br /><br />
+        <button type="submit">Save to Local Storage</button>
+      </form>
+      <br />
+      <button onclick="retrieveFromLocalStorage()">Retrieve Data</button>
+      <button onclick="clearLocalStorage()">Clear Storage</button>
+      <div id="output" style="margin-top: 20px"></div>
+    </div>
+  </body>
+</html>

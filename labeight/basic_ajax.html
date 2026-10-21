@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse AJAX Lab</title>
+    <script>
+      function fetchData() {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+        xhr.onload = function () {
+          if (this.status === 200) {
+            const response = JSON.parse(this.responseText);
+            document.getElementById("output").innerHTML = `<h3>${response.title}</h3><p>${response.body}</p>`;
+          } else {
+            document.getElementById("output").innerHTML = "Error fetching data";
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container" style="font-family: Arial, sans-serif; max-width: 700px; margin: 60px auto; padding: 28px; border-radius: 20px; background: linear-gradient(135deg, #ecfeff, #dbeafe); box-shadow: 0 18px 40px rgba(15,23,42,.12);">
+      <h1>Basic AJAX Request</h1>
+      <button onclick="fetchData()" style="background: linear-gradient(135deg, #0ea5e9, #22c55e); color: white; border: none; border-radius: 999px; padding: 12px 18px; font-weight: bold;">Fetch Data</button>
+      <div id="output" style="margin-top: 20px"></div>
+    </div>
+  </body>
+</html>

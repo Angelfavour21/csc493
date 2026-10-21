@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Block Grid</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        color: #292524;
+        background: linear-gradient(145deg, #fff7ed, #fce7f3 52%, #dbeafe);
+      }
+      .container {
+        padding-bottom: 48px;
+      }
+      .tile {
+        min-height: 110px;
+        display: grid;
+        place-items: center;
+        border: 0 !important;
+        border-radius: 4px 22px;
+        color: #292524;
+        font-size: 1.2rem;
+        font-weight: 700;
+        box-shadow: 0 14px 30px rgba(41, 37, 36, 0.09);
+      }
+      .tile-one {
+        background: #fed7aa;
+      }
+      .tile-two {
+        background: #bfdbfe;
+      }
+      .tile-three {
+        background: #bbf7d0;
+      }
+      .tile-four {
+        background: #fbcfe8;
+      }
+      .tile-five {
+        background: #ddd6fe;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-4">Bootstrap Grid System</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="tile tile-one">Column 1</div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-two">Column 2</div>
+        </div>
+        <div class="col-md-4">
+          <div class="tile tile-three">Column 3</div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="tile tile-four">Column 4</div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile tile-five">Column 5</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

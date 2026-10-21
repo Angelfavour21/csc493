@@ -1,0 +1,44 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1047 >>
+stream
+BT /F1 12 Tf 56 782 Td (HTML, XHTML, and XML: A Comparison) Tj ET
+BT /F1 12 Tf 56 764 Td (Rewritten response) Tj ET
+BT /F1 12 Tf 56 746 Td () Tj ET
+BT /F1 12 Tf 56 728 Td (HTML provides the elements used to structure content for browsers.) Tj ET
+BT /F1 12 Tf 56 710 Td (Its parsing rules are designed to make webpages widely accessible.) Tj ET
+BT /F1 12 Tf 56 692 Td (XHTML keeps HTML vocabulary but follows stricter XML well-formedness.) Tj ET
+BT /F1 12 Tf 56 674 Td (For example, elements must close and nesting must be correct.) Tj ET
+BT /F1 12 Tf 56 656 Td (XML is a general data format that lets authors define meaningful tags.) Tj ET
+BT /F1 12 Tf 56 638 Td (It carries information between systems rather than styling a page.) Tj ET
+BT /F1 12 Tf 56 620 Td (Thus, HTML focuses on rendering, XHTML on strict web documents,) Tj ET
+BT /F1 12 Tf 56 602 Td (and XML on representing and exchanging structured data.) Tj ET
+BT /F1 12 Tf 56 584 Td () Tj ET
+BT /F1 12 Tf 56 566 Td (The best choice depends on whether the goal is display or data.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001339 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1409
+%%EOF

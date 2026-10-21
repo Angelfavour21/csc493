@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion Block Lab</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, #fb7185, #f97316);
+        margin-top: 20px;
+        border-radius: 22px 6px;
+        box-shadow: 0 12px 28px rgba(249, 115, 22, 0.3);
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        color: #431407;
+        background: linear-gradient(145deg, #fff7ed, #fed7aa);
+      }
+      main {
+        width: min(500px, calc(100% - 40px));
+        padding: 32px;
+        border: 1px solid rgba(124, 45, 18, 0.15);
+        background: rgba(255, 255, 255, 0.72);
+        border-radius: 8px 28px;
+      }
+      button {
+        padding: 11px 16px;
+        border: 0;
+        border-radius: 4px;
+        background: #9a3412;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>jQuery Animation Example</h1>
+      <button id="animateButton">Animate Box</button>
+      <div id="box"></div>
+      <script>
+        $(document).ready(function () {
+          // Animate the box when the button is clicked
+          $("#animateButton").click(function () {
+            $("#box").animate(
+              {
+                width: "200px",
+                height: "200px",
+                opacity: 0.5,
+              },
+              1000
+            );
+          });
+        });
+      </script>
+    </main>
+  </body>
+</html>

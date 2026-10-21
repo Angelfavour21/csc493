@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Welcome Form</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        color: #3f1d0b;
+        background: repeating-linear-gradient(
+          135deg,
+          #fff7ed,
+          #fff7ed 18px,
+          #ffedd5 18px,
+          #ffedd5 36px
+        );
+      }
+      main {
+        width: min(460px, calc(100% - 40px));
+        padding: 30px;
+        background: white;
+        border-top: 6px solid #ea580c;
+        box-shadow: 10px 10px 0 #fed7aa;
+      }
+      input,
+      button {
+        padding: 11px;
+      }
+      button {
+        border: 0;
+        background: #ea580c;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Submit the Form</h1>
+      <form onsubmit="showAlert(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <br /><br />
+        <button type="submit">Submit</button>
+      </form>
+      <script>
+        function showAlert(event) {
+          event.preventDefault(); // Prevent the form from submitting
+          const username = document.getElementById("username").value;
+          alert("Form submitted! Welcome, " + username + "!");
+        }
+      </script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Pick Studio</title>
+    <script>
+      function savePreferences() {
+        const theme = document.getElementById("theme").value;
+        localStorage.setItem("theme", theme);
+        applyTheme(theme);
+        alert("Preferences saved");
+      }
+      function loadPreferences() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.getElementById("theme").value = savedTheme;
+          applyTheme(savedTheme);
+        }
+      }
+      function applyTheme(theme) {
+        document.body.className = theme;
+      }
+
+      window.onload = loadPreferences;
+    </script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #111827, #1d4ed8, #38bdf8);
+        color: white;
+      }
+      .preference-panel {
+        padding: 32px;
+        border-radius: 20px;
+        background: rgba(15, 23, 42, 0.7);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      }
+      .light {
+        background: #f8fafc;
+        color: #111827;
+      }
+      .dark {
+        background: #020617;
+        color: #f8fafc;
+      }
+      .light .preference-panel {
+        background: white;
+      }
+      .dark .preference-panel {
+        background: #172033;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preference-panel">
+      <h1>User Preferences Example</h1>
+      <label for="theme">Choose Theme:</label>
+      <select id="theme" style="padding: 10px; border-radius: 10px">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <button
+        onclick="savePreferences()"
+        style="
+          margin-left: 12px;
+          padding: 10px 16px;
+          border-radius: 10px;
+          border: none;
+          background: linear-gradient(135deg, #fbbf24, #f97316);
+          color: #111827;
+          font-weight: bold;
+        "
+      >
+        Save Preferences
+      </button>
+    </div>
+  </body>
+</html>

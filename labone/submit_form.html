@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precious Form Receipt</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ecfeff, #dbeafe, #fef3c7);
+        color: #0f172a;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+      }
+      .receipt {
+        background: rgba(255,255,255,0.8);
+        border: 1px solid rgba(15,23,42,0.1);
+        border-radius: 16px;
+        padding: 32px;
+        width: min(480px, 90vw);
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      }
+      h2 { margin-top: 0; }
+      p { line-height: 1.7; }
+    </style>
+  </head>
+  <body>
+    <div class="receipt">
+      <h2>Form Submitted Successfully!</h2>
+      <p>Thank you for your feedback.</p>
+      <p><strong>Name:</strong> [Display User's Name]</p>
+      <p><strong>Email:</strong> [Display User's Email]</p>
+      <p><strong>Comments:</strong> [Display User's Comments]</p>
+    </div>
+  </body>
+</html>

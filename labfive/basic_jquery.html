@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow jQuery Lab</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #14532d, #22c55e);
+        color: white;
+      }
+      .panel {
+        background: rgba(15, 23, 42, 0.75);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      }
+      #content {
+        display: none;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background: linear-gradient(135deg, #22c55e, #86efac);
+        border: none;
+        border-radius: 999px;
+        font-weight: bold;
+        color: #052e16;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <h1>jQuery Example</h1>
+      <button id="toggleButton">Show Content</button>
+      <div id="content">
+        <p>This content is toggled by the button using jQuery.</p>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#toggleButton").click(function () {
+          $("#content").slideToggle("slow");
+          $(this).text(function (i, text) {
+            return text === "Show Content" ? "Hide Content" : "Show Content";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

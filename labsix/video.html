@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screening Room</title>
+    <link rel="stylesheet" href="styles2.css" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        color: #f8fafc;
+        background: linear-gradient(135deg, #111827, #312e81, #0f766e);
+      }
+      #video-section {
+        width: min(760px, calc(100% - 32px));
+        padding: 28px;
+        background: rgba(15, 23, 42, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 6px 24px;
+      }
+      video {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="video-section">
+      <h2>Featured Video</h2>
+      <video id="myVideo" width="640" height="360" preload="metadata">
+        <source src="videos/sample.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-controls">
+        <button id="playBtn" type="button">Play</button>
+        <button id="pauseBtn" type="button">Pause</button>
+      </div>
+    </section>
+    <script src="javascript2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fff7ed, #fee2e2, #ecfeff);
+  color: #1f2937;
+}
+
+header {
+  background: linear-gradient(135deg, #0f172a, #7c3aed, #f97316);
+  color: white;
+  padding: 1.5em 1em;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.2);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.82);
+  margin: 30px auto 100px;
+  max-width: 800px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+h1, h2 {
+  color: #111827;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #111827;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,0 +1,15 @@
+/* CSS for Canvas Section */
+#animation-section {
+  text-align: center;
+  margin: 12px 0;
+}
+#animation-section h2 {
+  margin-top: 0;
+  color: #bae6fd;
+}
+#myCanvas {
+  width: 100%;
+  border: 1px solid rgba(125, 211, 252, 0.38);
+  border-radius: 14px;
+  background: radial-gradient(circle at center, #164e63, #082f49);
+}
