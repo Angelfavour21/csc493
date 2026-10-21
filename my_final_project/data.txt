@@ -1,0 +1,5 @@
+[
+	{"number":"01","title":"Sunrise Cove","description":"A two-night escape with sunrise breakfast, sea-view terrace, and a couples spa ritual.","type":"Suite","color":"#7ec8ff"},
+	{"number":"02","title":"Lagoon Escape","description":"Four nights of beachside calm, sunset dining, and wellness activities by the water.","type":"Retreat","color":"#38b3d7"},
+	{"number":"03","title":"Coral Family Stay","description":"A vibrant family package with villa comfort, kids club access, and private beach time.","type":"Family","color":"#f7bf68"}
+]
